@@ -9,10 +9,8 @@
 int _atoi(char *str, int *num)
 {
 	int num_sign = 1;
-
-	result = 0;
-	a;
-	index;
+	int result = 0;
+	int a, index;
 
 	for (index = 0; !(str[index] >= 48 && str[index] <= 57); index++)
 	{
@@ -29,11 +27,11 @@ int _atoi(char *str, int *num)
 			result = result + (str[a] - 48);
 		}
 		else
+		{
 			return (-1);
+		}
 	}
 
 	*num = result * num_sign;
-	(void)(num);
-
 	return (0);
 }

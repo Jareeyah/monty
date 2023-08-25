@@ -8,9 +8,9 @@
  */
 void opcode_pall(stack_t **stack, unsigned int count_line)
 {
-	(void) count_line;
-
 	stack_t *ptr;
+
+	(void) count_line;
 
 	ptr = *stack;
 

@@ -48,5 +48,5 @@ int _isdigit(char *string);
 void opcode_nop(stack_t **stack, unsigned int count_line);
 void monty_free(stack_t *stack);
 void opcode_pop(stack_t **stack, unsigned int count_line);
-int _atoi(char *sum, int *num)
+int _atoi(char *str, int *num);
 #endif /* MONTY_H */
