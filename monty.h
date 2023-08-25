@@ -23,6 +23,7 @@ typedef struct stack_s
         int n;
         struct stack_s *prev;
         struct stack_s *next;
+	char *buffer;
 } stack_t;
 
 /**
@@ -43,10 +44,15 @@ extern FILE *file;
 FILE *file;
 
 void (*func_op)(stack_t **, unsigned int count_line);
-void opcode_push(stack_t **stack, unsigned int count_line, char *buffer);
+void opcode_push(stack_t **stack, unsigned int line_number);
+void opcode_pall(stack_t **stack, unsigned int line_number);
 int _isdigit(char *string);
 void opcode_nop(stack_t **stack, unsigned int count_line);
 void monty_free(stack_t *stack);
 void opcode_pop(stack_t **stack, unsigned int count_line);
 int _atoi(char *str, int *num);
+void opcode_add(stack_t **stack, unsigned int count_line);
+void opcode_pint(stack_t **stack, unsigned int count_line);
+void opcode_swap(stack_t **stack, unsigned int count_line);
+void (*op(char *f_op, unsigned int i, stack_t **s))(stack_t**, unsigned int);
 #endif /* MONTY_H */

@@ -2,27 +2,24 @@
 /**
  * opcode_push - This is a program that pushes an element to stack
  * @stack: This is the stack that an element would be pushed to
- * @count_line: This is the number of lines
- * @buffer: This is the temporary data pointing to char
- * Return: void
+ * @line_number: This is the number of lines
  */
-void opcode_push(stack_t **stack, unsigned int count_line, char *buffer)
+void opcode_push(stack_t **stack, unsigned int line_number)
 {
-
+	char *buffer;
 	stack_t *stack_item;
-
-	(void)count_line;
+	buffer = strtok(NULL, "\n ");
 
 	if (buffer == NULL || _isdigit(buffer) == 1)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", count_line);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		fclose(file);
 		monty_free(*stack);
 		exit(EXIT_FAILURE);
 
 		if (_isdigit(buffer) == 1)
 		{
-			fprintf(stderr, "L%d: usage: push integer\n", count_line);
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			fclose(file);
 			monty_free(*stack);
 			exit(EXIT_FAILURE);

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "monty.h"
 
 /**
@@ -33,21 +34,22 @@ int main(int ac, char *av[])
 		else if (strcmp("push", op_arr[0]) == 0)
 		{
 			buffer = strtok(NULL, "\n ");
+				if (buffer != NULL)
+				{
+					opcode_push(&h, num_line);
+				}
 
-			opcode_push(&h, num_line, buffer);
 		} else if (op_arr[0] != NULL && op_arr[0][0] != '#')
 		{
-			func_op = go(op_arr[0], num_line, &h);
+			func_op = op(op_arr[0], num_line, &h);
 
 			if (func_op == NULL && num_line == 0)
 			{
 				fprintf(stderr, "L%ld: unknown instruction %s\n",
 					num_line, op_arr[0]);
 				exit(EXIT_FAILURE);
-			}
-		func_op(&h, num_line);
+			} func_op(&h, num_line);
 		}
-	}
-	fclose(file), free(s), monty_free(h);
+	} fclose(file), free(s), monty_free(h);
 	return (0);
 }
