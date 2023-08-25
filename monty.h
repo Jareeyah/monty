@@ -4,6 +4,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -35,4 +39,14 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+extern FILE *file;
+FILE *file;
+
+void (*func_op)(stack_t **, unsigned int count_line);
+void opcode_push(stack_t **stack, unsigned int count_line, char *buffer);
+int _isdigit(char *string);
+void opcode_nop(stack_t **stack, unsigned int count_line);
+void monty_free(stack_t *stack);
+void opcode_pop(stack_t **stack, unsigned int count_line);
+int _atoi(char *sum, int *num)
 #endif /* MONTY_H */
