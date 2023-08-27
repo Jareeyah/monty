@@ -55,4 +55,12 @@ void opcode_add(stack_t **stack, unsigned int count_line);
 void opcode_pint(stack_t **stack, unsigned int count_line);
 void opcode_swap(stack_t **stack, unsigned int count_line);
 void (*op(char *f_op, unsigned int i, stack_t **s))(stack_t**, unsigned int);
+void opcode_sub(stack_t **stack, unsigned int count_line);
+void opcode_div(stack_t **stack, unsigned int count_line);
+void opcode_mul(stack_t **stack, unsigned int count_line);
+void opcode_mod(stack_t **stack, unsigned int count_line);
+void opcode_pstr(stack_t **stack, unsigned int count_line);
+void opcode_pchar(stack_t **stack, unsigned int count_line);
+void opcode_rotr(stack_t **stack, unsigned int count_line);
+void opcode_rotl(stack_t **stack, unsigned int count_line);
 #endif /* MONTY_H */
