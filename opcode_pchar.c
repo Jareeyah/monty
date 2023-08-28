@@ -8,6 +8,8 @@
  */
 void opcode_pchar(stack_t **stack, unsigned int count_line)
 {
+	int isascii(int c);
+
 	if ((stack == NULL) || ((*stack) == NULL))
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", count_line);

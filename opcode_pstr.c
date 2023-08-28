@@ -9,6 +9,8 @@
  */
 void opcode_pstr(stack_t **stack, unsigned int count_line)
 {
+	int isascii(int c);
+
 	stack_t *first_item = *stack;
 
 	(void)count_line;
