@@ -9,8 +9,6 @@
  */
 int main(int ac, char *av[])
 {
-	ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-
 	char *s = NULL, *buffer, *op_arr[2];
 	stack_t *h = NULL;
 	size_t buffersize = 1024, num_line = 0;
