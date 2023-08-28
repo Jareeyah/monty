@@ -19,6 +19,15 @@ void (*op(char *f_op, unsigned int i, stack_t **s))(stack_t**, unsigned int)
 		{"add", opcode_add},
 		{"swap", opcode_swap},
 		{"nop", opcode_nop},
+		{"sub", opcode_sub},
+		{"div", opcode_div},
+		{"mul", opcode_mul},
+		{"mod", opcode_mod},
+		{"nop", opcode_nop},
+		{"rotl", opcode_rotl},
+		{"rotr", opcode_rotr},
+		{"pchar", opcode_pchar},
+		{"pstr", opcode_pstr},
 		{NULL, NULL}
 	};
 
