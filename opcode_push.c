@@ -7,7 +7,9 @@
 void opcode_push(stack_t **stack, unsigned int line_number)
 {
 	char *buffer;
+
 	stack_t *stack_item;
+
 	buffer = strtok(NULL, "\n ");
 
 	if (buffer == NULL || _isdigit(buffer) == 1)
